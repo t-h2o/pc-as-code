@@ -1,0 +1,166 @@
+#	~/.config/i3/config
+
+# set modifier
+set $super Mod4
+set $alt Mod1
+
+# Printscreen
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+# bindcode 218 exec "flameshot gui"
+
+# set font
+font pango: JetBrains Mono NL Bold
+
+# Use Mouse+$super to drag floating windows to their wanted position
+floating_modifier $super
+
+#autostart
+# exec --no-startup-id xrandr --dpi 200
+exec --no-startup-id hsetroot -cover ~/.wallpaper/earth.png
+exec --no-startup-id xsettingsd &
+exec --no-startup-id compton -b
+exec --no-startup-id xscreensaver
+exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
+
+#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/kitty'
+#exec --no-startup-id i3-msg 'workspace 7; exec /usr/bin/kitty --hold sh -c "cmus"'
+
+# Keyboard's layout: us (no variant); ch (fr variant).
+# Switch layout with alt+space
+exec --no-startup-id setxkbmap -layout "us,ch" -variant ",fr" -option 'grp:alt_space_toggle'
+
+# Sart shutter at startup
+#exec shutter --min_at_startup
+
+# start a terminal
+bindsym $super+Return exec kitty
+
+# start nemo
+bindsym $super+e exec nemo
+
+# start dmenu (a program launcher)
+bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'JetBrains Mono:size=20'"
+bindsym $super+d exec "rofi -show drun -show-icons"
+bindsym $super+g exec "rofi -show window -show-icons"
+bindsym $super+s exec "rofi -terminal kitty -show ssh -show-icons"
+#bindsym $super+d exec "rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -icon-theme Papirus -sidebar-mode -columns 3 -font 'Noto Sans 8'"
+
+# common apps keybinds
+#bindsym Print exec scrot -s -e 'viewnior ~/$f'  'Cheese_%a-%d%b%y_%H.%M.png'
+bindsym Print exec shutter --select
+bindsym $super+w exec i3lock -i ~/.wallpaper/earth.png
+bindsym $super+Shift+w exec xscreensaver-command --lock
+bindsym $super+Shift+f exec thunar;workspace 3;focus
+bindsym $super+Shift+g exec geany
+
+# kill focused window
+bindsym $super+x kill
+bindsym $alt+F4 kill
+
+# change focus
+#	letters
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
+
+#	arrows
+bindsym $super+Left focus left
+bindsym $super+Down focus down
+bindsym $super+Up focus up
+bindsym $super+Right focus right
+
+# move focused window
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
+bindsym $super+Shift+Left move left
+bindsym $super+Shift+Down move down
+bindsym $super+Shift+Up move up
+bindsym $super+Shift+Right move right
+
+# enter fullscreen mode for the focused container
+bindsym $super+f fullscreen toggle
+
+# switch to workspace
+bindsym $alt+Control+Right workspace next
+bindsym $alt+Control+Left workspace prev
+bindsym $alt+Control+l workspace next
+bindsym $alt+Control+h workspace prev
+bindsym $super+1 workspace 1
+bindsym $super+2 workspace 2
+bindsym $super+3 workspace 3
+bindsym $super+4 workspace 4
+bindsym $super+5 workspace 5
+bindsym $super+6 workspace 6
+bindsym $super+7 workspace 7
+bindsym $super+8 workspace 8
+bindsym $super+9 workspace 9
+
+# move focused container to workspace
+bindsym $super+Shift+1 move container to workspace 1
+bindsym $super+Shift+2 move container to workspace 2
+bindsym $super+Shift+3 move container to workspace 3
+bindsym $super+Shift+4 move container to workspace 4
+bindsym $super+Shift+5 move container to workspace 5
+bindsym $super+Shift+6 move container to workspace 6
+bindsym $super+Shift+7 move container to workspace 7
+bindsym $super+Shift+8 move container to workspace 8
+bindsym $super+Shift+9 move container to workspace 9
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $super+Shift+r restart
+
+# exit i3
+bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+bindsym $super+Shift+q exec "i3-msg exit"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Return mode "default"
+}
+bindsym $super+r mode "resize"
+
+# window rules
+for_window [class=".*"] border pixel 0
+
+# colour of border, background, text, indicator, and child_border
+
+client.focused              #711c91 #711c91 #d8dee8 #711c91 #711c91
+client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background           #2f343f
+
+####################################
+# ROB Custom Config
+####################################
+
+# Repeat rate config
+exec --no-startup-id xset r rate 220 40
+# 185 -  delay
+# 100 - interval
+
+# Control volume
+bindsym $super+Control+$alt+k exec amixer -D pulse sset Master 5%+
+bindsym $super+Control+$alt+j exec amixer -D pulse sset Master 5%-
+
+set $mainmonitor  DP-1-1
+set $laptopmonitor eDP-1
+set $secondmonitor DP-1-2
+
+# Brightness
+bindsym $super+o exec "brightnessctl set +5%"
+bindsym $super+Shift+o exec "brightnessctl set 5%-"

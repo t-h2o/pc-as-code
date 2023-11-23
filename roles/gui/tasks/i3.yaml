@@ -1,0 +1,17 @@
+---
+- name: Create /home/{{ ansible_user }}/.config/i3 directory if it does not exist
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user }}/.config/i3"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
+- name: Copy i3 config
+  ansible.builtin.copy:
+    src: "config"
+    dest: "/home/{{ ansible_user }}/.config/i3/config"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0644"
+...

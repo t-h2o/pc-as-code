@@ -1,0 +1,17 @@
+---
+- name: Create .config/picom directory if it does not exist
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user }}/.config/picom"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
+- name: Copy configuration of picom
+  ansible.builtin.copy:
+    src: "picom.conf"
+    dest: "/home/{{ ansible_user }}/.config/picom/"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0644"
+...

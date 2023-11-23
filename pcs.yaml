@@ -1,0 +1,10 @@
+---
+- hosts: pcs
+  become: true
+  roles:
+    - role: "gui"
+    - role: "kitty"
+    - role: "tmux"
+    - role: "vim"
+    - role: "ufw"
+...

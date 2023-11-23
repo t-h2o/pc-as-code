@@ -1,0 +1,28 @@
+---
+- name: Install GUI packages
+  ansible.builtin.package:
+    name:
+      - "papirus-icon-theme"
+      - "xscreensaver"
+      - "brightnessctl"
+      - "xclip"
+      - "hsetroot"
+      - "rofi"
+      - "maim"
+      - "xorg"
+      - "xorg-xinit"
+      - "xorg-server"
+      - "i3-wm"
+      - "i3lock"
+      - "i3status"
+      - "dmenu"
+      - "picom"
+    state: latest
+
+- include_tasks: xscreensaver.yaml
+- include_tasks: i3.yaml
+- include_tasks: rofi.yaml
+- include_tasks: wallpaper.yaml
+- include_tasks: xinit.yaml
+- include_tasks: picom.yaml
+...

@@ -1,0 +1,11 @@
+---
+- name: Install ufw
+  ansible.builtin.package:
+    name: ufw
+    state: latest
+
+- name: Deny everything and enable UFW
+  community.general.ufw:
+    state: enabled
+    policy: deny
+...

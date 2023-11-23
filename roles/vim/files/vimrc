@@ -1,0 +1,5 @@
+" ~/.vimrc
+
+source $HOME/.config/vim/plugins-list.vimrc
+source $HOME/.config/vim/plugins-configuration.vimrc
+source $HOME/.config/vim/settings.vimrc

@@ -1,0 +1,38 @@
+---
+- name: Install the last version of kitty
+  ansible.builtin.package:
+    name: "kitty"
+    state: latest
+
+- name: Create .config/kitty directory if it does not exist
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user }}/.config/kitty"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
+- name: Copy configuration file
+  ansible.builtin.copy:
+    src: "kitty.conf"
+    dest: "/home/{{ ansible_user }}/.config/kitty/kitty.conf"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0644"
+
+- name: Copy dark theme file
+  ansible.builtin.copy:
+    src: "theme-dark.conf"
+    dest: "/home/{{ ansible_user }}/.config/kitty/theme-dark.conf"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0644"
+
+- name: Copy light theme file
+  ansible.builtin.copy:
+    src: "theme-light.conf"
+    dest: "/home/{{ ansible_user }}/.config/kitty/theme-light.conf"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0644"
+...
