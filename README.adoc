@@ -1,18 +1,7 @@
 = PC as Code
 
-== Vim
-
-=== Plugins list
-
-* https://github.com/jiangmiao/auto-pairs[jiangmiao/auto-pairs]
-* https://github.com/preservim/nerdtree[preservim/nerdtree]
-* https://github.com/junegunn/rainbow_parentheses.vim[junegunn/rainbow_parentheses.vim]
-* https://github.com/godlygeek/tabular[godlygeek/tabular]
-* https://github.com/dpelle/vim-Grammalecte[dpelle/vim-Grammalecte]
-+
-----
-mkdir ~/.grammalecte-fr
-cd ~/.grammalecte-fr
-curl -LO https://grammalecte.net/zip/Grammalecte-fr-v2.1.1.zip
-unzip Grammalecte-fr-v2.1.1.zip
-----
+* Text editor: link:roles/vim[vim]
+* Terminal multiplexer: link:roles/tmux[tmux]
+* Terminal emulator: link:roles/kitty[kitty]
+* Firewall: link:roles/ufw[ufw]
+* GUI: link:roles/gui[gui]

@@ -1,0 +1,90 @@
+= https://sw.kovidgoyal.net/kitty/[Kitty]
+
+== My shortcuts
+
+=== Generals
+
+|===
+| keys | effect
+
+| `ctrl + d`
+| exit
+
+| `ctrl + o`
+| increase opacity
+
+| `ctrl + shift + o`
+| dicrease opacity
+
+| `ctrl + shift + +`
+| increase font size
+
+| `ctrl + shift + -`
+| dicrease font size
+|===
+
+=== Tabs
+
+|===
+| keys | effect
+
+| `ctrl + t`
+| new tab
+
+| `ctrl + shift + t`
+| close tab
+
+| `ctrl + tab`
+| switch tab front
+
+| `ctrl + shift + tab`
+| switch tab back
+|===
+
+=== Split screen
+
+|===
+| keys | effect
+
+| `alt + shift + v`
+| split vertical
+
+| `alt + shift + h`
+| split horizontal
+|===
+
+=== Move
+
+|===
+| keys | effect
+
+| `alt + h`
+| move left
+
+| `alt + j`
+| move down
+
+| `alt + k`
+| move up
+
+| `alt + l`
+| move right
+|===
+
+=== Resizing
+
+|===
+| keys | effect
+
+| `alt + shift + h`
+| window narrower
+
+| `alt + shift + l`
+| window wider
+
+| `alt + shift + k`
+| window taller
+
+| `alt + shift + l`
+| window shorter 3
+|===

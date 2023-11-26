@@ -1,0 +1,145 @@
+= GUI
+
+* https://i3wm.org/[i3]
+* https://github.com/davatorium/rofi[rofi]
+* https://www.jwz.org/xscreensaver/[XScreenSaver]
+* https://github.com/yshui/picom[picom]
+
+== shortcuts i3
+
+=== Lock screen
+
+|===
+| keys | effect
+
+| `ctrl + w`
+| i3 lock
+
+| `ctrl + shift + w`
+| lock with xscreensaver
+|===
+
+=== rofi
+
+|===
+| keys | effect
+
+| `super + d`
+| launch rofi
+|===
+
+=== Screenshot
+
+|===
+| keys | effect
+
+| `Ctrl+Shift+Print`
+| Screenshot
+|===
+
+=== Brightness
+
+|===
+| keys | effect
+
+| `ctrl + o`
+| Increase by 5%
+
+| `ctrl + shift + o`
+| Decrease by 5%
+|===
+
+=== Workspaces
+
+|===
+| keys | effect
+
+| `ctrl + alt + left`
+| move to left workspace
+
+| `ctrl + alt + right`
+| move to right workspace
+
+| `super + 1`
+| move to the workspace 1
+
+| `super + [n]`
+| move to the workspace [n]
+|===
+
+=== Switching windows
+
+|===
+| keys | effect
+
+| `super + h`
+| move to left window
+
+| `super + j`
+| move to down window
+
+| `super + k`
+| move to up window
+
+| `super + l`
+| move to right window
+|===
+
+=== dashboard
+
+|===
+| keys | effect
+
+| `super + shift + d`
+| open dashboard
+|===
+
+=== Resizing window
+
+. activate "resize" mode by `super + r`
+. Resize
+
+|===
+| keys | effect
+
+| `h` or `left`
+| shrink window
+
+| `j` or `down`
+| grow height window
+
+| `k` or `up`
+| shrink height window
+
+| `l` or `right`
+| shrink window
+|===
+
+. press `return` to quit.
+
+=== Moving window
+
+|===
+| keys | effect
+
+| `super + space`
+| toggle float/tilling mode
+|===
+
+=== Tilling mode
+
+|===
+| keys | effect
+
+| `super + shift + j`
+| move window left
+
+| `super + shift + k`
+| move window down
+
+| `super + shift + l`
+| move window up
+
+| `super + shift + ;`
+| move window right
+|===
