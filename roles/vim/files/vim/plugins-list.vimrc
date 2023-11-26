@@ -8,4 +8,6 @@ call plug#begin()
 
   Plug 'godlygeek/tabular'
 
+  Plug 'dpelle/vim-Grammalecte'
+
 call plug#end()
