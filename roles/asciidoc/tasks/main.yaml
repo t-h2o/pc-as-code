@@ -1,0 +1,11 @@
+---
+- name: Install the last version of asciidoc-tools
+  ansible.builtin.package:
+    name:
+      - "asciidoc"
+      - "asciidoctor"
+      - "jdk-openjdk"
+      - "gnuplot"
+      - "xdot"
+    state: latest
+...

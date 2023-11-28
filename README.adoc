@@ -5,3 +5,4 @@
 * Terminal emulator: link:roles/kitty[kitty]
 * Firewall: link:roles/ufw[ufw]
 * GUI: link:roles/gui[gui]
+* Markup language: link:roles/asciidoc[AsciiDoc]
