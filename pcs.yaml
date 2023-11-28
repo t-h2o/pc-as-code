@@ -2,6 +2,7 @@
 - hosts: pcs
   become: true
   roles:
+    - role: "locale"
     - role: "gui"
     - role: "kitty"
     - role: "tmux"

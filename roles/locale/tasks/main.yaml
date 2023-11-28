@@ -1,0 +1,15 @@
+---
+- name: Generate languages
+  community.general.locale_gen:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - "fr_CH.UTF-8"
+    - "en_US.UTF-8"
+
+- name: copy locale configuration
+  ansible.builtin.copy:
+    src: locale.conf
+    dest: "/etc/locale.conf"
+    mode: 0664
+...
