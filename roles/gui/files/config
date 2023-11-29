@@ -23,9 +23,9 @@ exec --no-startup-id compton -b
 exec --no-startup-id xscreensaver
 exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
 
-#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 7; exec /usr/bin/kitty --hold sh -c "cmus"'
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/kitty'
-#exec --no-startup-id i3-msg 'workspace 7; exec /usr/bin/kitty --hold sh -c "cmus"'
 
 # Keyboard's layout: us (no variant); ch (fr variant).
 # Switch layout with alt+space
