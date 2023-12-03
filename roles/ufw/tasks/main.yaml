@@ -4,8 +4,32 @@
     name: ufw
     state: latest
 
+- name: disable IPV6
+  ansible.builtin.replace:
+    path: /etc/default/ufw
+    regexp: '^IPV6=yes$'
+    replace: 'IPV6=no'
+
 - name: Deny everything and enable UFW
   community.general.ufw:
     state: enabled
     policy: deny
+
+- name: allowed ports
+  community.general.ufw:
+    rule: allow
+    proto: tcp
+    port: "{{ item.port }}"
+    comment: "{{ item.comment }}"
+  with_items:
+    - "{{ ufw.allow }}"
+
+- name: limited ports
+  community.general.ufw:
+    rule: limit
+    proto: tcp
+    port: "{{ item.port }}"
+    comment: "{{ item.comment }}"
+  with_items:
+    - "{{ ufw.limit }}"
 ...
