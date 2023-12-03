@@ -1,0 +1,10 @@
+---
+ufw:
+  allow:
+    - comment: "http"
+      port: 80
+    - comment: "https"
+      port: 443
+  limit:
+    - comment: "ssh"
+      port: 22
