@@ -23,6 +23,7 @@
     comment: "{{ item.comment }}"
   with_items:
     - "{{ ufw.allow }}"
+  when: "{{ ufw.allow }}"
 
 - name: limited ports
   community.general.ufw:
@@ -30,6 +31,7 @@
     proto: tcp
     port: "{{ item.port }}"
     comment: "{{ item.comment }}"
+  when: "{{ ufw.limit }}"
   with_items:
     - "{{ ufw.limit }}"
 ...
