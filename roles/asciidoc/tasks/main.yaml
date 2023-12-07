@@ -6,5 +6,9 @@
       - "asciidoctor"
       - "gnuplot"
       - "xdot"
+      - "jre-openjdk-headless"
     state: latest
+
+- name: install /usr/bin/gem install asciidoctor-diagram
+  ansible.builtin.command: /usr/bin/gem install asciidoctor-diagram
 ...

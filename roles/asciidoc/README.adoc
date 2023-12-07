@@ -3,5 +3,5 @@
 == install asciidoctor-diagram
 
 ----
-/usr/bin/gem install 
+/usr/bin/gem install asciidoctor-diagram
 ----
