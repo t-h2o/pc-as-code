@@ -9,4 +9,5 @@
     - role: "vim"
     - role: "ufw"
     - role: "asciidoc"
+    - role: "sound"
 ...

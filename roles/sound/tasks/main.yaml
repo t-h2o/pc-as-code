@@ -1,0 +1,7 @@
+---
+- name: Install pulseaudio and pavucontrol
+  ansible.builtin.package:
+    name:
+      - "pulseaudio"
+      - "pavucontrol"
+    state: latest
