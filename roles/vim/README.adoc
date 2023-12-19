@@ -14,3 +14,4 @@ cd ~/.grammalecte-fr
 curl -LO https://grammalecte.net/zip/Grammalecte-fr-v2.1.1.zip
 unzip Grammalecte-fr-v2.1.1.zip
 ----
+* https://github.com/kaarmu/typst.vim[kaarmu/typst.vim]

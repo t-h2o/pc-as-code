@@ -10,4 +10,6 @@ call plug#begin()
 
   Plug 'dpelle/vim-Grammalecte'
 
+  Plug 'kaarmu/typst.vim'
+
 call plug#end()
