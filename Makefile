@@ -12,4 +12,12 @@ $(INDEX): $(README)
 
 docs: $(INDEX)
 
+lint-yaml:
+	yamllint .
+
+lint-ansible:
+	ansible-lint roles
+
+lint: lint-yaml lint-ansible
+
 .PHONY: docs
