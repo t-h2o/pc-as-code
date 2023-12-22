@@ -1,5 +1,5 @@
 ---
-- name: Create /home/{{ ansible_user }}/.config/i3 directory if it does not exist
+- name: Create .config/i3 directory
   ansible.builtin.file:
     path: "/home/{{ ansible_user }}/.config/i3"
     owner: "{{ ansible_user }}"

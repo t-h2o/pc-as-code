@@ -4,7 +4,7 @@
     name: "tmux"
     state: latest
 
-- name: Create .config/tmux directory if it does not exist
+- name: Create .config/tmux directory
   ansible.builtin.file:
     path: "/home/{{ ansible_user }}/.config/tmux"
     owner: "{{ ansible_user }}"

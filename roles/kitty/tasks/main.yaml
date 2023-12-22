@@ -4,7 +4,7 @@
     name: "kitty"
     state: latest
 
-- name: Create .config/kitty directory if it does not exist
+- name: Create .config/kitty directory
   ansible.builtin.file:
     path: "/home/{{ ansible_user }}/.config/kitty"
     owner: "{{ ansible_user }}"

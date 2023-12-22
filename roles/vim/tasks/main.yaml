@@ -20,7 +20,7 @@
     group: "{{ ansible_user }}"
     mode: "0644"
 
-- name: Create a .vim directory if it does not exist
+- name: Create a .vim directory
   ansible.builtin.file:
     path: "/home/{{ ansible_user }}/.vim/autoload"
     owner: "{{ ansible_user }}"

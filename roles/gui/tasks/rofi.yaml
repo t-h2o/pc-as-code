@@ -1,5 +1,5 @@
 ---
-- name: Create .config/rofi directory if it does not exist
+- name: Create .config/rofi directory
   ansible.builtin.file:
     path: "/home/{{ ansible_user }}/.config/rofi"
     owner: "{{ ansible_user }}"
