@@ -9,6 +9,8 @@
       - "jre-openjdk-headless"
     state: latest
 
-- name: install /usr/bin/gem install asciidoctor-diagram
-  ansible.builtin.command: /usr/bin/gem install asciidoctor-diagram
+- name: Install latest available version of asciidoctor-diagram
+  community.general.gem:
+    name: asciidoctor-diagram
+    state: latest
 ...
