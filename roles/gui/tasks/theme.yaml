@@ -1,0 +1,9 @@
+---
+- name: Copy theme program
+  ansible.builtin.copy:
+    src: "switch-theme.sh"
+    dest: "/usr/local/bin/switch-theme.sh"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+...

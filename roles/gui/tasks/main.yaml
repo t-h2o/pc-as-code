@@ -25,4 +25,5 @@
 - include_tasks: wallpaper.yaml
 - include_tasks: xinit.yaml
 - include_tasks: picom.yaml
+- include_tasks: theme.yaml
 ...
