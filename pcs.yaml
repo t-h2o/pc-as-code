@@ -3,6 +3,7 @@
   become: true
   roles:
     - role: "locale"
+    - role: "fonts"
     - role: "gui"
     - role: "kitty"
     - role: "tmux"

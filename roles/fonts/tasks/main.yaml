@@ -1,0 +1,17 @@
+---
+- name: Install the fonts
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - terminus-font
+    - ttf-jetbrains-mono
+
+- name: Copy vconsole.conf in /etc/
+  ansible.builtin.copy:
+    src: "vconsole.conf"
+    dest: "/etc/"
+    owner: "root"
+    group: "root"
+    mode: "0644"
+...
