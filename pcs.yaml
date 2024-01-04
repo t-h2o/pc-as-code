@@ -3,6 +3,7 @@
   become: true
   roles:
     - role: "locale"
+    - role: "omz"
     - role: "fonts"
     - role: "gui"
     - role: "kitty"
